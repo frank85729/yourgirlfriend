@@ -1,0 +1,85 @@
+[*]
+[*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+[*] Tue Sep 09 12:57:00 2025
+[*]
+[dumpfile] "build/cpu_tb.vcd"
+[dumpfile_mtime] "Tue Sep 09 12:57:00 2025"
+[dumpfile_size] 94208
+[savefile] "cpu_waveform.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1 -1
+*-18.000000 25000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] cpu_tb.
+[treeopen] cpu_tb.u_cpu_top.
+[sst_width] 300
+[signals_width] 250
+[sst_expanded] 1
+[sst_vpaned_height] 400
+
+@28
+cpu_tb.u_cpu_top.clk
+@29
+cpu_tb.u_cpu_top.rst_n
+@22
+cpu_tb.u_cpu_top.pc[31:0]
+@28
+[color] 2
+cpu_tb.u_cpu_top.if_instruction[31:0]
+@29
+[color] 3
+cpu_tb.u_cpu_top.id_instruction[31:0]
+@28
+[color] 4
+cpu_tb.u_cpu_top.ex_alu_op[3:0]
+@22
+[color] 5
+cpu_tb.u_cpu_top.alu_result[31:0]
+@28
+[color] 6
+cpu_tb.u_cpu_top.mem_alu_result[31:0]
+@29
+[color] 7
+cpu_tb.u_cpu_top.wb_data[31:0]
+@28
+cpu_tb.u_cpu_top.wb_reg_write
+@22
+cpu_tb.u_cpu_top.wb_rd_addr[4:0]
+@28
+[color] 1
+cpu_tb.u_cpu_top.u_register_file.registers[1][31:0]
+@29
+[color] 2
+cpu_tb.u_cpu_top.u_register_file.registers[2][31:0]
+@28
+[color] 3
+cpu_tb.u_cpu_top.u_register_file.registers[3][31:0]
+@29
+[color] 4
+cpu_tb.u_cpu_top.u_register_file.registers[4][31:0]
+@28
+[color] 5
+cpu_tb.u_cpu_top.u_register_file.registers[5][31:0]
+@29
+[color] 6
+cpu_tb.u_cpu_top.forward_a[1:0]
+@28
+[color] 7
+cpu_tb.u_cpu_top.forward_b[1:0]
+@22
+[color] 1
+cpu_tb.u_cpu_top.forwarded_rs1_data[31:0]
+@28
+[color] 2
+cpu_tb.u_cpu_top.forwarded_rs2_data[31:0]
+@29
+[color] 3
+cpu_tb.u_cpu_top.branch_taken
+@28
+[color] 4
+cpu_tb.u_cpu_top.jump
+@29
+[color] 5
+cpu_tb.u_cpu_top.pc_stall
+[pattern_trace] 1
+[pattern_trace] 0
