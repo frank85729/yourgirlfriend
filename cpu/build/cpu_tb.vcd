@@ -1,5 +1,5 @@
 $date
-	Tue Sep  9 12:05:51 2025
+	Tue Sep  9 12:57:39 2025
 $end
 $version
 	Icarus Verilog
@@ -293,9 +293,49 @@ $upscope $end
 $scope task load_test_program $end
 $upscope $end
 $upscope $end
+$scope module cpu_tb $end
+$scope module u_cpu_top $end
+$scope module u_register_file $end
+$var reg 32 u" \registers[1] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module u_cpu_top $end
+$scope module u_register_file $end
+$var reg 32 v" \registers[2] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module u_cpu_top $end
+$scope module u_register_file $end
+$var reg 32 w" \registers[3] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module u_cpu_top $end
+$scope module u_register_file $end
+$var reg 32 x" \registers[4] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module u_cpu_top $end
+$scope module u_register_file $end
+$var reg 32 y" \registers[5] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+b0 y"
+b0 x"
+b0 w"
+b0 v"
+b0 u"
 b0 t"
 b0 s"
 b100 r"
@@ -853,6 +893,7 @@ b1000000010000000100011 U"
 b11000 4
 b11000 f"
 b11000 g"
+b10010001101000101000000000000 u"
 b10 '
 b10 ,"
 b10 b"
@@ -965,6 +1006,7 @@ b100011 v
 b100100011010001010011001111000 *
 b100100011010001010011001111000 n"
 b100100011010001010011001111000 t"
+b10010001101000101011001111000 v"
 b11100 3
 b11100 e"
 b11000 5
@@ -1071,6 +1113,7 @@ b11000010000010001100011 U"
 b100000 4
 b100000 f"
 b100000 g"
+b100100011010001010011001111000 w"
 b100 '
 b100 ,"
 b100 b"
@@ -1194,6 +1237,7 @@ b1100011 v
 b0 *
 b0 n"
 b0 t"
+b1 x"
 b100100 3
 b100100 e"
 b100000 5
@@ -1264,6 +1308,7 @@ b10010001101000101011001111000 ;
 b10010001101000101011001111000 z
 b10010001101000101011001111000 Z"
 1s
+b0 y"
 0&
 b0 '
 b0 ,"

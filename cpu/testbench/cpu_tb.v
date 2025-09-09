@@ -135,6 +135,39 @@ module cpu_tb;
     initial begin
         $dumpfile("cpu_tb.vcd");
         $dumpvars(0, cpu_tb);
+        
+        // 显式添加关键信号到波形（确保可见性）
+        $dumpvars(1, u_cpu_top.clk);
+        $dumpvars(1, u_cpu_top.rst_n);
+        $dumpvars(1, u_cpu_top.pc);
+        $dumpvars(1, u_cpu_top.if_instruction);
+        $dumpvars(1, u_cpu_top.id_instruction);
+        $dumpvars(1, u_cpu_top.ex_alu_op);
+        $dumpvars(1, u_cpu_top.alu_result);
+        $dumpvars(1, u_cpu_top.mem_alu_result);
+        $dumpvars(1, u_cpu_top.wb_data);
+        $dumpvars(1, u_cpu_top.wb_reg_write);
+        $dumpvars(1, u_cpu_top.wb_rd_addr);
+        
+        // 寄存器文件状态
+        $dumpvars(1, u_cpu_top.u_register_file.registers[1]);
+        $dumpvars(1, u_cpu_top.u_register_file.registers[2]);
+        $dumpvars(1, u_cpu_top.u_register_file.registers[3]);
+        $dumpvars(1, u_cpu_top.u_register_file.registers[4]);
+        $dumpvars(1, u_cpu_top.u_register_file.registers[5]);
+        
+        // 转发信号
+        $dumpvars(1, u_cpu_top.forward_a);
+        $dumpvars(1, u_cpu_top.forward_b);
+        $dumpvars(1, u_cpu_top.forwarded_rs1_data);
+        $dumpvars(1, u_cpu_top.forwarded_rs2_data);
+        
+        // 分支和跳转信号
+        $dumpvars(1, u_cpu_top.branch_taken);
+        $dumpvars(1, u_cpu_top.jump);
+        $dumpvars(1, u_cpu_top.pc_stall);
+        
+        $display("VCD波形文件配置完成，包含关键流水线信号");
     end
 
 endmodule

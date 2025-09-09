@@ -63,6 +63,26 @@ sim: $(TARGET)
 wave: $(VCD_FILE)
 	$(GTKWAVE) $(VCD_FILE)
 
+# 使用预配置的波形查看
+wave-config: $(VCD_FILE) cpu_waveform.gtkw
+	$(GTKWAVE) -f $(VCD_FILE) -a cpu_waveform.gtkw
+
+# 生成波形分析报告
+wave-info: $(VCD_FILE)
+	@echo "=== 5级流水线CPU波形文件信息 ==="
+	@echo "文件: $(VCD_FILE)"
+	@echo "大小: $$(ls -lh $(VCD_FILE) | awk '{print $$5}')"
+	@echo "生成时间: $$(ls -l $(VCD_FILE) | awk '{print $$6, $$7, $$8}')"
+	@echo ""
+	@echo "包含信号数量: $$(grep -c '$$var' $(VCD_FILE) || echo 'N/A')"
+	@echo "仿真时间: $$(tail -10 $(VCD_FILE) | grep -o '#[0-9]*' | tail -1 | sed 's/#//' || echo 'N/A')ps"
+	@echo ""
+	@echo "查看波形："
+	@echo "  make wave          # 使用GTKWave查看"
+	@echo "  make wave-config   # 使用预配置查看"
+	@echo ""
+	@echo "波形分析指南: waveform_guide.md"
+
 # 运行测试并生成波形
 test: $(TARGET)
 	cd $(BUILD_DIR) && $(VVP) cpu_tb
